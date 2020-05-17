@@ -3,10 +3,10 @@
 
 ## Background
 
-**This package will be helping easily you with several critical issues:**
+**This package will be assiting easily you with several training phases:**
 
-1. You will define your required metric.
-2. ESBM will evaulate your model performance on the validation set.
+1. First, you should define your required metric.
+2. ESBM will then evaulate your model performance on the validation set.
 3. It will select the best classsification threshold and inform you about the results.
 4. It will save the best evaualted model for future use.
 5. It will initate early stopping after a defined period with no metric improvment.
