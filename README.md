@@ -17,9 +17,8 @@
 
 ## How to use?
 
-First you got to define your earlystopping object.
+**First you got to initialize your earlystopping object.**
 
-class EarlyStoppingByMetric(Callback):
                               
     def __init__(self, x_val, y_val, patience, batch_size, threshold_searching = 50, metric = "precision", min_samples = 50):
 
@@ -28,4 +27,15 @@ class EarlyStoppingByMetric(Callback):
 from earlyStopping import EarlyStoppingByMetric
 
 ESBM = EarlyStoppingByMetric(x_val, y_val, patience = 5, batch_size = 256)
+
 ```     
+
+**Then you just use it in your .fit as a another callback**
+
+``` python
+
+model.fit(Xtr, Ytr, validation_data = (Xv,Yv),epochs=50, batch_size=256, verbose=1,callbacks=[ESBM],shuffle=True)
+
+
+```     
+
