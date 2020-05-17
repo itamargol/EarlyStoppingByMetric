@@ -1,4 +1,4 @@
-## ESBM - EarlyStopping customized to your own metric (including threshold optimizing and best model serailization)
+## ESBM - EarlyStopping customized to your own needs = metrices (including threshold optimization and best model serailization)
 
 ![](https://github.com/itamargol/Focal_Loss/blob/master/imbalance.jpg)
 
