@@ -19,9 +19,7 @@
 
 **First you got to initialize your earlystopping object.**
 
-                              
-    def __init__(self, x_val, y_val, patience, batch_size, threshold_searching = 50, metric = "precision", min_samples = 50):
-
+                           
 ``` python
 
 from earlyStopping import EarlyStoppingByMetric
@@ -49,14 +47,14 @@ ESBM = EarlyStoppingByMetric(x_val, y_val, patience, batch_size, threshold_searc
 
 ```    
 
-**How long would you like to wait before earlystopping initiation:**
+**How long would you like to wait before earlystopping initiation?**
 
 ``` python
 
 ESBM = EarlyStoppingByMetric(... , patience = 10 , ...)
 ```   
 
-**How many iterations to perform while looking for your best classification threshold**
+**How many iterations to perform while looking for your best classification threshold?**
 
 ``` python
 
@@ -72,7 +70,7 @@ ESBM = EarlyStoppingByMetric(... , metric = "precision" , ...)
 
 ```  
 
-**What are the minimum amount of samples you would like to take into account while optimizing metric on validation set**
+**What is the minimum amount of samples would you like to take into account while optimizing metric on validation set?**
 
 ``` python
 
