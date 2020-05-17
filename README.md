@@ -1,6 +1,5 @@
 ## ESBM - EarlyStopping customized to your own needs = metrices (including threshold optimization and best model serailization)
 
-![](https://github.com/itamargol/Focal_Loss/blob/master/imbalance.jpg)
 
 ## Background
 
@@ -13,7 +12,7 @@
 5. It will initate early stopping after a defined period with no metric improvment.
 
 
-![](https://github.com/itamargol/Focal_Loss/blob/master/focal_loss.png)
+![](https://github.com/itamargol/EarlyStoppingByMetric/blob/master/Precisionrecall.svg.png)
 
 ## How to use?
 
