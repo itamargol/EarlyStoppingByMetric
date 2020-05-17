@@ -1,4 +1,4 @@
-## ESBM - EarlyStopping customized to your own metric (including threshold optimizing)
+## ESBM - EarlyStopping customized to your own metric (including threshold optimizing and best model serailization)
 
 ![](https://github.com/itamargol/Focal_Loss/blob/master/imbalance.jpg)
 
@@ -38,4 +38,22 @@ model.fit(Xtr, Ytr, validation_data = (Xv,Yv),epochs=50, batch_size=256, verbose
 
 
 ```     
+
+## Some nuances:
+
+**There are a few more arguments you are able to pass into the ESBM object in order to recieve your ideal results.**
+
+``` python
+
+ESBM = EarlyStoppingByMetric(x_val, y_val, patience, batch_size, threshold_searching = 50, metric = "precision", min_samples = 50)
+
+```    
+
+**How long would you like to wait before earlystopping initiation:**
+
+``` python
+
+ESBM = EarlyStoppingByMetric(...,patience = 10 ,...)
+```    
+
 
