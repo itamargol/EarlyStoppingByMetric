@@ -1,28 +1,31 @@
-## Focal_Loss Implementation
+## ESBM - EarlyStopping customized to your own metric (including threshold optimizing)
 
 ![](https://github.com/itamargol/Focal_Loss/blob/master/imbalance.jpg)
 
 ## Background
 
-**Keras lightest implementation for focal loss function.**
+**This package will be helping easily you with several critical issues:**
 
-Great mathematical solution for optimizing scenarios of unbalanced-classes.
-Focal loss down-weights the well-classified examples (boosting-like concept). 
-This has the net effect of putting more training emphasis on that data that is hard to classify. 
+1. You will define your required metric.
+2. ESBM will evaulate your model performance on the validation set.
+3. It will select the best classsification threshold and inform you about the results.
+4. It will save the best evaualted model for future use.
+5. It will initate early stopping after a defined period with no metric improvment.
 
->...Hence if an example is easily classified, then its probability p would be >> 0.5(close to 0.9–1.0) and 1 — p which is close to zero causes C.E to produce a very small value, ending up in very low or no learning for that example. The term γ is the focusing parameter which adjusts the rate at which easy examples are downweighted...
-
-**[Link to the original paper](https://arxiv.org/abs/1708.02002)**
-
-**[Lighter Medium read](https://towardsdatascience.com/neural-networks-intuitions-3-focal-loss-for-dense-object-detection-paper-explanation-61bc0205114e)**
 
 ![](https://github.com/itamargol/Focal_Loss/blob/master/focal_loss.png)
 
 ## How to use?
 
+First you got to define your earlystopping object.
+
+class EarlyStoppingByMetric(Callback):
+                              
+    def __init__(self, x_val, y_val, patience, batch_size, threshold_searching = 50, metric = "precision", min_samples = 50):
+
 ``` python
-from focal_loss import focal_loss
 
-model.compile(loss=[focal_loss()], metrics=["accuracy"], optimizer=adam)
+from earlyStopping import EarlyStoppingByMetric
 
+ESBM = EarlyStoppingByMetric(x_val, y_val, patience = 5, batch_size = 256)
 ```     
