@@ -53,7 +53,33 @@ ESBM = EarlyStoppingByMetric(x_val, y_val, patience, batch_size, threshold_searc
 
 ``` python
 
-ESBM = EarlyStoppingByMetric(...,patience = 10 ,...)
+ESBM = EarlyStoppingByMetric(... , patience = 10 , ...)
+```   
+
+**How many iterations to perform while looking for your best classification threshold**
+
+``` python
+
+ESBM = EarlyStoppingByMetric(... , threshold_searching = 50 , ...)
 ```    
+
+
+**Which metric which you like to optimize?**
+
+``` python
+
+ESBM = EarlyStoppingByMetric(... , metric = "precision" , ...)
+
+```  
+
+**What are the minimum amount of samples you would like to take into account while optimizing metric on validation set**
+
+``` python
+
+ESBM = EarlyStoppingByMetric(... , min_samples = 50 , ...)
+
+```    
+
+
 
 
